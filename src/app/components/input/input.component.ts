@@ -7,7 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  @Input() type;
+  @Input() label: string = "Label";
+  @Input() type: string;
+  @Input() placeholder: string = 'Placeholder';
+  @Input() disabled: boolean = false;
+  @Input() helperText: boolean = false;
+  @Input() helperTextText: string = 'Some interesting text';
+  @Input() iconPosition: string;
+  @Input() iconName: string;
+  @Input() rows: number;
 
   constructor() { }
 

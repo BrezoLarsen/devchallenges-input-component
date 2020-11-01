@@ -11,7 +11,59 @@
   <div class="row">
     <p><Input error / ></p>
     <app-input [type]="'error'"></app-input>
-</div>
+  </div>
+
+  <div class="row">
+    <p><Input disabled / ></p>
+    <app-input disabled="true"></app-input>
+  </div>
+
+  <div class="row">
+    <p><Input helperText="Some interesting text" / ></p>
+    <app-input [helperText]="true"></app-input>
+  </div>
+
+  <div class="row">
+    <p><Input helperText="Some interesting text" error / ></p>
+    <app-input [helperText]="true" [type]="'error'"></app-input>
+  </div>
+
+  <div class="row grid grid--two">
+    <div>
+      <p><Input startIcon / ></p>
+      <app-input [iconPosition]="'left'" [iconName]="'phone'"></app-input>
+    </div>
+    <div>
+      <p><Input endIcon / ></p>
+      <app-input [iconPosition]="'right'" [iconName]="'lock'"></app-input>
+    </div>
+  </div>
+
+  <div class="row">
+    <p><Input value="text" / ></p>
+    <app-input [placeholder]="'Text'"></app-input>
+  </div>
+
+  <div class="row grid grid--two">
+    <div>
+      <p><Input size="sm" / ></p>
+      <app-input [type]="'sm'"></app-input>
+    </div>
+    <div>
+      <p><Input size="md" / ></p>
+      <app-input></app-input>
+    </div>
+  </div>
+
+  <div class="row">
+    <p><Input fullWidth / ></p>
+    <app-input [type]="'fullWidth'"></app-input>
+  </div>
+
+  <div class="row">
+    <p><Input multiline row="4" / ></p>
+    <app-input [rows]="4"></app-input>
+  </div>
 
   <div class="row resources">
     <p>Icons: https://material.io/resources/icons/?style=round</p>

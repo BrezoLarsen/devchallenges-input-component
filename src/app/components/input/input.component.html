@@ -1,4 +1,7 @@
-<div class="input-container">
-  <input class="{{type}}" type="text" placeholder="Placeholder">
-  <label for="">Label</label>
+<div class="input-container {{type}} {{iconPosition}}">
+  <span class="material-icons">{{iconName}}</span>
+  <input class="input" *ngIf="!rows" type="text" placeholder="{{placeholder}}" [disabled]="disabled">
+  <textarea class="input" *ngIf="rows" name="" id="" rows="{{rows}}" placeholder="{{placeholder}}"></textarea>
+  <label for="">{{label}}</label>
+  <p *ngIf="helperText">{{helperTextText}}</p>
 </div>

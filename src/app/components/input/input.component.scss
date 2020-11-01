@@ -1,16 +1,82 @@
 .input-container {
+  width: 200px;
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
+  &.error {
+    label {
+      color: #D32F2F;
+    }
+    p {
+      color: #D32F2F;
+    }
+    .input {
+      border: 1px solid #D32F2F;
+      &:hover {
+        border: 1px solid #333333;
+        + label, ~ p {
+          color: #333333;
+        }
+      }
+      &:focus {
+        border: 1px solid #D32F2F;
+        + label, ~ p {
+          color: #D32F2F;
+        }
+      }
+    }
+  }
+  &.left {
+    span {
+      color: #828282;
+      position: absolute;
+      top: 37px;
+      left: 12px;
+    }
+    .input {
+      padding: 17px 10px 17px 50px;
+    }
+  }
+  &.right {
+    span {
+      color: #828282;
+      position: absolute;
+      top: 37px;
+      right: 12px;
+    }
+    .input {
+      padding: 17px 50px 17px 10px;
+    }
+  }
+  &.sm {
+    .input {
+      height: 40px;
+    }
+  }
+  &.fullWidth {
+    width: 100%;
+  }
 }
 
-input {
-  width: 200px;
-  height: 56px;
-  padding: 0 12px;
+p {
+  margin: 0;
+  position: absolute;
+  bottom: -20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 10px;
+  color: #828282;
+}
+
+.input {
+  padding: 17px 12px;
   border: 1px solid #828282;
   box-sizing: border-box;
   border-radius: 8px;
   outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828282;
   + label {
     display: block;
     margin-bottom: 4px;
@@ -27,22 +93,8 @@ input {
       color: #2962FF;
     }
   }
-  &.error {
-    border: 1px solid #D32F2F;
-    + label {
-      color: #D32F2F;
-    }
-    &:hover {
-      border: 1px solid #333333;
-      + label {
-        color: #333333;
-      }
-    }
-    &:focus {
-      border: 1px solid #D32F2F;
-      + label {
-        color: #D32F2F;
-      }
-    }
+  &:disabled {
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
   }
 }
