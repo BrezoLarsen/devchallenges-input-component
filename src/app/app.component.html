@@ -3,29 +3,15 @@
     <h1>Inputs</h1>
   </header>
 
-  <div class="row grid grid--three">
-    <div>
+  <div class="row">
       <p><Input / ></p>
-    </div>
-    <div>
-      <p><Input / ></p>
-    </div>
-    <div>
-      <p><Input / ></p>
-    </div>
+      <app-input></app-input>
   </div>
 
-  <div class="row grid grid--three">
-    <div>
-      <p><Input / ></p>
-    </div>
-    <div>
-      <p><Input / ></p>
-    </div>
-    <div>
-      <p><Input / ></p>
-    </div>
-  </div>
+  <div class="row">
+    <p><Input error / ></p>
+    <app-input [type]="'error'"></app-input>
+</div>
 
   <div class="row resources">
     <p>Icons: https://material.io/resources/icons/?style=round</p>

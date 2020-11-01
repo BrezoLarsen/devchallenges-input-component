@@ -1,0 +1,48 @@
+.input-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+input {
+  width: 200px;
+  height: 56px;
+  padding: 0 12px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  + label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    color: #333333, 100%;
+  }
+  &:hover {
+    border: 1px solid #333333;
+  }
+  &:focus {
+    border: 1px solid #2962FF;
+    + label {
+      color: #2962FF;
+    }
+  }
+  &.error {
+    border: 1px solid #D32F2F;
+    + label {
+      color: #D32F2F;
+    }
+    &:hover {
+      border: 1px solid #333333;
+      + label {
+        color: #333333;
+      }
+    }
+    &:focus {
+      border: 1px solid #D32F2F;
+      + label {
+        color: #D32F2F;
+      }
+    }
+  }
+}
